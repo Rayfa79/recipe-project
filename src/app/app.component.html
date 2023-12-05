@@ -1,0 +1,10 @@
+<app-header (selectedPage)="onSelectedPage($event)"></app-header>
+<div class="container" style="border: 1px solid royalblue;">
+  <div class="row">
+    <div class="col-md-12" style="border: 1px solid red;">
+      <app-recipes *ngIf="loadedPage ==='recipes'"></app-recipes>
+      <app-shopping-list *ngIf="loadedPage!== 'recipes'"></app-shopping-list>
+    </div>
+  </div>
+</div>
+

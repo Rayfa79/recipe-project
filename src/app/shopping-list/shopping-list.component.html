@@ -1,0 +1,15 @@
+<!--Shopping edit component goes here which has a form
+    Below the form we will dynamically add a list of shopping items
+-->
+
+<div class="row">
+  <div class="col-xs-10">
+    <app-shopping-edit></app-shopping-edit>
+    <hr>
+<!--Display array of ingredients-->
+<ul class="list-group">
+  <!--remove href because using as button and dont want undesired actions-->
+  <a class="list-group-item" style="cursor: pointer" *ngFor="let ingredient of ingredients; let i = index" >{{ingredient.name}} ({{ingredient.amount}})</a>
+</ul>
+  </div>
+</div>

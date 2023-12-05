@@ -1,0 +1,40 @@
+<!---Recipe Items go here!-->
+<div class="row">
+
+<!--expand the full width (will be nested inside recipes component col-md-5)-->
+  <div class="col-xs-12" style="padding: 1.5em 0;">
+    <button class="btn btn-success">New Recipe</button>
+  </div>
+
+  <hr>
+
+
+
+
+
+  <!--Add new row that will hold list of recipes-->
+  <div class="row">
+    <div class="col-xs-12">
+      <!-- <a href="#" class="list-group-item clearfix" *ngFor="let recipe of recipes; let i = index">
+        <div class="pull-left">
+          <h4 class="list-group-item-heading">
+            {{ recipe.name }}
+          </h4>
+          <p class="list-group-item-text">{{ recipe.description }}</p>
+        </div>
+        <span class="pull-right">
+          <img [src]="recipe.imagePath" alt="{{ recipe.name }}"
+          title="{{ recipe.name }}" class="img-responsive" style="max-height: 50px;">
+        </span>
+      </a>-->
+
+      <!--Recipe Item Card: This Goes in Recipe Item!!-->
+
+      <app-recipe-item *ngFor="let recipe of recipes; let i= index"
+      [recipe]="recipe">
+    </app-recipe-item>
+    </div>
+
+  </div>
+</div>
+
