@@ -1,9 +1,13 @@
 <!--Place recipe-list and recipe-details side by side in recipes component--->
 <div class="row">
   <div class="col-md-5">
-    <app-recipe-list></app-recipe-list>
+   <app-recipe-list (recipeListRecipeSelected)="recipeDetailRecipeSelected($event)"></app-recipe-list>
   </div>
   <div class="col-md-7">
-    <app-recipe-details></app-recipe-details>
+  <!--Only show recipe if the selectedRecipe property is truthy(when click recipe event emitter passes event that tells what recipe is clicked)-->
+    <app-recipe-details *ngIf="selectedRecipe; else recipe" [recipe]="selectedRecipe"></app-recipe-details>
+    <ng-template #recipe>
+      <p>Please Select a Recipe</p>
+    </ng-template>
   </div>
 </div>
