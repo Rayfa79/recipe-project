@@ -10,6 +10,7 @@
             class="form-control"
             name="name"
             ngModel
+            #nameInput
           >
         </div>
 
@@ -21,13 +22,14 @@
             name="amount"
             class="form-control"
             ngModel
+            #amountInput
             >
          </div>
       </div>
 
         <div class="row">
           <div class="col-xs-12 button-group">
-            <button class="btn btn-success">Add</button>
+            <button class="btn btn-success" (click)="onAddIngredients()">Add</button>
             <button class="btn btn-primary">Delete</button>
             <button class="btn btn-danger">Clear</button>
           </div>
