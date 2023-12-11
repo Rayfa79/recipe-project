@@ -7,7 +7,7 @@ import { Ingredient } from '../shared/ingredient.model';
   styleUrls: ['./shopping-list.component.css']
 })
 export class ShoppingListComponent implements OnInit {
-  //formIngredient: Ingredient;
+  
 
   ingredients: Ingredient[]  = [
     new Ingredient('hamburger buns', 10),
@@ -22,7 +22,7 @@ export class ShoppingListComponent implements OnInit {
   }
 
   onIngredientsSelected(ingredient: Ingredient) {
-    //this.formIngredient = ingredient
+    
     this.ingredients.push(ingredient)
     console.log(this.ingredients)
   }
